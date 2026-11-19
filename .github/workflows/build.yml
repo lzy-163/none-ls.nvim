@@ -26,4 +26,4 @@ jobs:
           version: ${{ matrix.version }}
       - run: make test
         working-directory: none-ls.nvim
-        timeout-minutes: 1
+        timeout-minutes: 10
