@@ -23,7 +23,7 @@ jobs:
       - uses: rhysd/action-setup-vim@v1
         with:
           neovim: true
-          version: ${{ matrix.version }}
+          version: ${{ matrix.version == 'latest' && 'stable' || matrix.version }}
       - run: make test
         working-directory: none-ls.nvim
         timeout-minutes: 1
